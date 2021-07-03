@@ -16,19 +16,23 @@ const app = Vue.createApp(AttributeBinding);
 app.component("metro-line", {
   props: ["start", "end", "line", "color"],
   template: `<div class="metro-line">
-    <span class="station station-start">
-    <span v-if="line.start.length<=8">{{line.start}}</span>
-    <span v-if="line.start.length>8"><small>{{line.start}}</small></span>
-    </span>
-    <span v-bind:style="'color:'+line.color">
-        -----------
+    <div style="display:inline-block">
+      <div class="station station-start">
+      <span v-if="line.start.length<=8">{{line.start}}</span>
+      <span v-if="line.start.length>8"><small>{{line.start}}</small></span>
+      </div>
+      <span v-bind:style="'color:'+line.color">-----------</span>
+    </div>
+    <div v-bind:style="'color:'+line.color+';display:inline-block;'">
         <span class="line" v-bind:style="'background-color:'+line.color">{{line.line}}</span>
-        ----------▶
-    </span>
-    <span class="station station-end">
-    <span v-if="line.end.length<=8">{{line.end}}</span>
-    <span v-if="line.end.length>8"><small>{{line.end}}</small></span
-    </span>
+    </div>
+    <div style="display:inline-block">
+      <span v-bind:style="'color:'+line.color">----------▶</span>
+      <div class="station station-end">
+      <span v-if="line.end.length<=8">{{line.end}}</span>
+      <span v-if="line.end.length>8"><small>{{line.end}}</small></span
+      </div>
+    </div>
 </div>`,
 });
 
