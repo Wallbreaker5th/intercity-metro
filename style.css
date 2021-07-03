@@ -1,0 +1,64 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  height: 100%;
+}
+
+.content {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  padding: 10px;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+.line {
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 12px;
+  width: 11em;
+}
+
+.station {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  width: 9em;
+  display: inline-block;
+  box-shadow: 3px 3px 5px lightgray;
+}
+
+.station-start {
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 10px 0px 0px 10px;
+  text-align: right;
+}
+
+.station-end {
+  padding-right: 4px;
+  padding-left: 4px;
+  border-radius: 0px 10px 10px 0px;
+  text-align: left;
+}
+
+.metro-line {
+  height: 40px;
+  text-align: center;
+}
+
+input{
+  font-size: medium;
+}
+

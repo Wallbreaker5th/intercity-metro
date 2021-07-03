@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地铁换城 | 重新定义城市轨道交通</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <h1 style="font-weight:400">地铁换城</h1>
+        <div>
+            <div style="text-align: center;">
+                起点站：<input id="start" list="stations" placeholder="例：虹口足球场"/>
+                终点站：<input id="end" list="stations" placeholder="例：柏林"/>
+                <datalist id="stations"></datalist>
+                <button onclick="updateLines();">确认</button>
+            </div>
+        </div>
+        <div style="height: 30px;"></div>
+        <div id="lines-list" style="text-align: center;min-height: 60%;">
+            <div id="message"></div>
+            <metro-line v-for="item in lines" v-bind:line="item"></metro-line>
+        </div>
+        <footer style="margin: 20px;color:gray">
+            <p>本网站仅供娱乐，请勿用于正式出行规划。</p>
+            <span style="float: left;">By 破壁人五号</span>
+            <span style="float: right;" title="一个凭空捏造的公司。与任何现实中的团体或个人无关。">平帆科技 | TrisialTech</span>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/vue@3.1.2/dist/vue.global.prod.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
