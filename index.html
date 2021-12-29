@@ -10,11 +10,11 @@
 
 <body>
     <div class="content">
-        <h1 style="font-weight:400">地铁换城</h1>
+        <h1 style="font-weight: 400;">地铁换城</h1>
         <div>
             <div style="text-align: center;">
-                起点站：<input id="start" list="stations" placeholder="例：虹口足球场"/>
-                终点站：<input id="end" list="stations" placeholder="例：柏林"/>
+                起点站：<input id="start" list="stations" /> 终点站：
+                <input id="end" list="stations" />
                 <datalist id="stations"></datalist>
                 <button onclick="updateLines();">确认</button>
             </div>
@@ -25,9 +25,14 @@
             <metro-line v-for="item in lines" v-bind:line="item"></metro-line>
         </div>
         <footer style="margin: 20px;color:gray">
-            <p>本网站仅供娱乐，请勿用于正式出行规划。</p>
-            <span style="float: left;">By 破壁人五号</span>
-            <span style="float: right;" title="一个凭空捏造的公司。与任何现实中的团体或个人无关。">平帆科技 | TrisialTech</span>
+            <p>请勿将本网站用于正式出行规划。</p>
+            <span style="float: left;">
+                <script type="text/javascript">
+                    document.write(unescape("%3Cspan id='cnzz_stat_icon_1280738114'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1280738114%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                By 破壁人五号
+            </span>
+            <span style="float: right;" title="一个凭空捏造的组织。与任何现实中的团体或个人无关。">平帆科技 | Trisial Technique</span>
         </footer>
     </div>
     <script src="https://unpkg.com/vue@3.1.2/dist/vue.global.prod.js"></script>
