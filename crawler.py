@@ -38,7 +38,7 @@ def fix(city, line, wrong_name, correct_name):
         )
         print(f"将{city}{line}的“{wrong_name}”修正为“{correct_name}”")
     except KeyError:
-        print(f"找不到{city}{line}下的“{wrong__name}”")
+        print(f"找不到{city}{line}下的“{wrong_name}”")
 
 
 cities = [
